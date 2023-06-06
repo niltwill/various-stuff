@@ -1,0 +1,23 @@
+! YouTube no videos while pausing/end suggestions/cards
+youtube.com##.ytp-cards-teaser
+youtube.com##.ytp-ce-element
+youtube.com##.ytp-ce-element-shadow
+youtube.com##.ytp-ce-bottom-left-quad
+youtube.com##.ytp-ce-bottom-right-quad
+youtube.com##.ytp-ce-expanding-overlay
+youtube.com##.ytp-ce-expanding-image
+youtube.com##.ytp-ce-covering-image
+youtube.com##.ytp-ce-covering-shadow-top
+youtube.com##.ytp-ce-covering-overlay
+youtube.com##.ytp-ce-video
+youtube.com##.ytp-ce-element-show
+youtube.com##.ytp-ce-large-round
+youtube.com##.ytp-ce-size-1920
+youtube.com##.videowall-endscreen
+youtube.com##.html5-endscreen-content
+youtube.com##.html5-endscreen
+
+! YouTube no custom branding image
+youtube.com##.annotation
+youtube.com##.annotation-type-custom iv-branding
+youtube.com##.branding-img-container

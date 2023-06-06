@@ -1,0 +1,111 @@
+/*** Change right-click tab -> reload tab to be first context menu entry (for both single tab and multiple tab selections) ***/
+#tabContextMenu #context_reloadTab, #tabContextMenu #context_reloadSelectedTabs {
+    -moz-box-ordinal-group: 0 !important;
+}
+
+/*** Remove specific right-click context menu items ***/
+#tabContextMenu .share-tab-url-item, /* "Share"  (when right-clicking on a tab) */
+#context_reopenInContainer, /* open in new container tab (when right-clicking on a tab) */
+#context-inspect-a11y, /* inspect user accessibility */
+#context-sendimage, /* email image */
+#context-openlinkinusercontext-menu, /* open link in new container tab */
+#context-pocket, /* save page to pocket */
+#context-savelinktopocket, /* save link to pocket */
+#context-print-selection /* print selection */
+ { display:none!important;}
+
+/*** Tighten up vertical drop-down(bookmark)/context/popup menu spacing ***/
+menupopup > menuitem, menupopup > menu {   
+  padding-block: 1px !important;   
+}   
+:root {   
+  --arrowpanel-menuitem-padding: 1px 2px !important;   
+}    
+
+/*** Added to remove extra bookmark spacing after sept 2021 update: https://www.reddit.com/r/FirefoxCSS/comments/pmrp83/latest_update_has_messed_up_bookmark_spacing/ ***/
+#PlacesToolbar menuitem {
+    min-height: 0px !important;
+}
+
+/*
+FF96 UPDATE
+references:  https://gist.github.com/tung/439935f55cc83af20defd7867ec89c82; , https://www.reddit.com/r/FirefoxCSS/comments/s1jdr5/firefox_tabbar_completely_messed_up_after_v96/
+*/
+/* remove radius from buttons and tabs */
+*|*:root {
+	--toolbarbutton-border-radius: 0 !important;
+	--tab-border-radius: 0px !important;
+	--toolbarbutton-outer-padding: 0 !important;
+  --toolbarbutton-inner-padding: 8px !important;
+  --toolbar-start-end-padding: 0 !important;
+}
+
+/* remove margin from tabs */
+.tab-background {
+	margin-block: 0 !important;
+}
+
+/* remove padding between tabs */
+.tabbrowser-tab {
+	padding-inline: 0 !important;
+}
+
+/* add vertical line between tabs */
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]):not([beforeselected-visible="true"]) .tab-background {
+border-right: 1px solid var(--lwt-background-tab-separator-color, rgba(0, 0, 0, 0.2)) !important;
+} 
+
+/* fix for when titlebar gets taller when there are many tabs */
+#tabbrowser-arrowscrollbox {
+	height: var(--tab-min-height);
+}
+
+/* force tabs to 30px height (added this because they're bit too short when the above fix is applied by itself) */
+#tabbrowser-tabs {
+  height: 30px !important;
+}
+/*
+END OF FF96 UPDATE
+*/
+
+/* Tabs on bottom */
+#titlebar{
+order: 2;
+-moz-appearance: none !important;
+--tabs-navbar-shadow-size: 0px;
+}
+
+:root{ --uc-window-control-width: 0px !important }
+ 
+#navigator-toolbox{ padding-top: calc(20px + var(--uc-titlebar-padding,0px)) !important }
+ 
+#toolbar-menubar{
+position: fixed;
+display: flex;
+top: var(--uc-titlebar-padding,0px);
+height: 29px;
+width: 100%;
+overflow: hidden;
+}
+
+/* Bookmarks below */
+/*#navigator-toolbox #PersonalToolbar {
+    -moz-box-ordinal-group: 2 !important;
+    order: 2 !important;
+}*/
+
+
+/* Tab bar below Navigation & Bookmarks Toolbars 
+   For best results, show Title Bar or Menu Bar */
+/*
+#nav-bar {
+  -moz-box-ordinal-group: 1 !important;
+  border-top-width: 0 !important; 
+}
+#PersonalToolbar {
+  -moz-box-ordinal-group: 2 !important;
+}
+#TabsToolbar {
+  -moz-box-ordinal-group: 3 !important;
+}
+*/
