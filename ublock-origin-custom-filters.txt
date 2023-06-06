@@ -19,5 +19,6 @@ youtube.com##.html5-endscreen
 
 ! YouTube no custom branding image
 youtube.com##.annotation
-youtube.com##.annotation-type-custom iv-branding
+youtube.com##.annotation-type-custom
+youtube.com##.iv-branding
 youtube.com##.branding-img-container
