@@ -29,7 +29,7 @@ custom_bottom_bottom=725
 
 If you do a screen capture and check what's up, you can calculate that the pixels align correctly now with the bottom screen (centered as it should be). I also removed the 6 pixels at the left, since the bottom screen was also stretched completely to fit the screen's width. You can of course add back the 6 pixels at the left if you want to. The width difference between the two is now 10 pixels, so that they become the same, round numbers. That is:
 
-Larger screen: 1350x820
+Larger screen: 1350x820<br>
 Smaller screen: 560x370
 
 Just for fun, I also did this particular side-by-side arrangement for the Steam Deck's screen size, though it's untested (1280x800):
