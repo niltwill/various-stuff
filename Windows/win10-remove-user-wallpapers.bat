@@ -1,7 +1,7 @@
 @echo off
 
 :: RUN AS ADMIN
-:: UNCOMMENT LAST LINE IF YOU DON'T WANT TO LOGOUT
+:: COMMENT OUT THE LAST LINE IF YOU DON'T WANT TO LOGOUT
 
 :: Someone asked me to remove their personal wallpapers 'cause they only borrowed a certain computer and need to give it back
 :: This also deletes those wallpapers, beware!
@@ -91,4 +91,3 @@ FOR /L %%i IN (0,1,4) DO (
 
 :: Log out to refresh the desktop wallpaper
 shutdown -l /f
-
