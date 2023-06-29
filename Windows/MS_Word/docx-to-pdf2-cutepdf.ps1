@@ -79,7 +79,7 @@ $pdfPrinter = Get-WmiObject -Query "SELECT * FROM Win32_Printer WHERE Name='$dri
 $printerSet = $false
 try {
     $pdfPrinter.SetDefaultPrinter() | Out-Null
-	Write-Host "Changed default printer to: $driverName."
+    Write-Host "Changed default printer to: $driverName."
     $printerSet = $true
 } catch {
     Write-Host "Could not set printer to $drivername. Exiting script."
@@ -96,12 +96,12 @@ $registryPath = "HKCU:\Software\CutePDF Writer"
 Get-ChildItem -Path $documents_path -Filter *.doc? | ForEach-Object {
     $docFile = $_.FullName
     $pdfFile = Join-Path -Path $_.DirectoryName -ChildPath ($_.BaseName + '.pdf')
-	
+
     # Add printer port to specify filename and avoid "save as" popup
     #Add-PrinterPort -Name $pdfFile
     #Get-Printer -Name "$driverName" | Set-Printer -PortName $pdfFile
 
-	# Alternatively for CutePDF Writer 4.0, we can use the registry
+    # Alternatively for CutePDF Writer 4.0, we can use the registry
     If (-NOT (Test-Path "$registryPath")) {
         New-Item -Path "$registryPath" -Force | Out-Null
     }
@@ -117,7 +117,7 @@ Get-ChildItem -Path $documents_path -Filter *.doc? | ForEach-Object {
     $word.Visible = $false
     $doc = $word.Documents.Open($docFile)
     $doc.PrintOut() | Out-Null
-	
+
     # Wait until the printing queue finishes
     $Printer = Get-Printer -Name $driverName
     $PrinterSpool = Get-PrintJob -PrinterObject $Printer
@@ -125,14 +125,14 @@ Get-ChildItem -Path $documents_path -Filter *.doc? | ForEach-Object {
         Start-Sleep -Milliseconds 500
         $PrinterSpool = Get-PrintJob -PrinterObject $Printer
     }
-	
+
     # Check if the PDF file was created
     if (Test-Path $pdfFile) {
         Write-Host "Successfully converted $docFile to PDF: $pdfFile"
     } else {
         Write-Host "Failed to convert $docFile to PDF."
     }
-	
+
     # Cleanup to avoid potential memory leaks and hanging processes
     $doc.Close()
     $word.Quit()
@@ -153,7 +153,7 @@ if ($printerSet -eq $true){
     Remove-ItemProperty -Path "$registryPath" -Name BypassSaveAs -Force | Out-Null
     Remove-ItemProperty -Path "$registryPath" -Name OutputFile -Force | Out-Null
  
-	# Alternatively, for no registry approach
+    # Alternatively, for no registry approach
     #Restore original printer port
     #CutePDF Writer - CPW4:
     #Bullzip PDF Printer - BULLZIP
