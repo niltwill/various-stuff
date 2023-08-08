@@ -1,6 +1,8 @@
 # Citra custom layouts
 
-If you search for this, a popular link will lead to this [page](https://www.reddit.com/r/Citra/comments/afsq4a/various_custom_screen_layouts/) (this is set to private right now, but you can still [access it with Wayback Machine](https://web.archive.org/web/20230117050248/https://www.reddit.com/r/Citra/comments/afsq4a/various_custom_screen_layouts/)). I was not really satisfied with those presets, side-by-side or in set is not the best way to go.
+**I've made a very simple program in C# that can generate custom layouts for Citra, using three options: centered, side-by-side, in set bottom right. This should make it a lot easier to generate your desired values. [Download it from here.](Citra-LayoutGenerator.zip)**
+
+If you search for this, a popular link will lead to this [page](https://www.reddit.com/r/Citra/comments/afsq4a/various_custom_screen_layouts/). I was not really satisfied with those presets, side-by-side or in set is not the best way to go.
 
 If we want to imitate the real Nintendo 3DS console as close as possible, then the two screens should be placed at top and bottom, so it is not exactly right to place the smaller bottom screen next to the enlarged top screen (and the inset option means you can never see that part of the top screen, so that's not the brightest idea to do either).
 
@@ -13,7 +15,7 @@ Then what to do? Well, first of all, the original screen sizes are the following
 
 So these two sizes can be multiplied, but for best accuracy, the aspect ratio should remain 5:3 for the top screen and 4:3 for the bottom screen. Based on this, you can do this for any monitor screen size, as long as you understand how to do the math. It's easiest to use an image editor, use colored rectangles and check the length of the pixels.
 
-For now, I have made several custom layouts for certain screen resolutions. Doing this manually can take hours, later I'll do it for some more common screen sizes with simple preview images:
+For now, I have made several custom layouts for certain screen resolutions. Doing this manually can take hours, later (eventually) I'll do it for some more common screen sizes with simple preview images:
 
 * 1280x1024
 * 1366x768
