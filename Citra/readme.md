@@ -1,6 +1,6 @@
 # Citra custom layouts
 
-**I've made a very simple program in C# that can generate custom layouts for Citra, using three options: centered, side-by-side, in set bottom right. This should make it a lot easier to generate your desired values. [Download it from here.](Citra-LayoutGenerator.zip)**
+**I've made a very simple program in C# that can generate custom layouts for Citra, using three options: centered, side-by-side, in set bottom right. This should make it a lot easier to generate your desired values. [Download it from here.](https://github.com/niltwill/various-stuff/raw/main/Citra/Citra-LayoutGenerator.zip)**
 
 If you search for this, a popular link will lead to this [page](https://www.reddit.com/r/Citra/comments/afsq4a/various_custom_screen_layouts/). I was not really satisfied with those presets, side-by-side or in set is not the best way to go.
 
