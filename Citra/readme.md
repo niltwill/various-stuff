@@ -2,9 +2,7 @@
 
 **I've made a very simple program in C# that can generate custom layouts for Citra, using three options: centered, side-by-side, in set (top left, top right, bottom left, bottom right). If you want to generate for different screen sizes or for in set, this should make it a lot easier. [Download it from here.](https://github.com/niltwill/various-stuff/raw/main/Citra/Citra-LayoutGenerator.zip)**
 
-If you search for this, a popular link will lead to this [page](https://www.reddit.com/r/Citra/comments/afsq4a/various_custom_screen_layouts/). That got me started, however if we want to imitate the real Nintendo 3DS console as close as possible, then the two screens should be placed at top and bottom, so it is not exactly right to place the smaller bottom screen next to the enlarged top screen (and the inset option means you can never see that part of the top screen, so that's not the brightest idea to do either).
-
-Then what to do? Well, first of all, the original screen sizes are the following:
+If you search for this, a popular link will lead to this [page](https://www.reddit.com/r/Citra/comments/afsq4a/various_custom_screen_layouts/). That got me started. The original screen sizes are the following:
 
 ```
 400x240 (5:3 aspect ratio) - top
@@ -13,7 +11,7 @@ Then what to do? Well, first of all, the original screen sizes are the following
 
 So these two sizes can be multiplied, but for best accuracy, the aspect ratio should remain 5:3 for the top screen and 4:3 for the bottom screen. Based on this, you can do this for any monitor screen size, as long as you understand how to do the math. It's easiest to use an image editor, use colored rectangles and check the length of the pixels.
 
-I have made several custom layouts for some of the most popular and widely used screen resolutions (with the desktop or laptop screen). If you want it for different screen sizes (e.g. for mobiles, tablets, etc.), use the simple C# program, linked above.
+I have made several custom layouts with centered and side-by-side layouts for some of the most popular and widely used screen resolutions (with the desktop or laptop screen). If you want it for different screen sizes or with different top and bottom screen sizes (e.g. for mobiles, tablets, etc.), use the simple C# program, linked above.
 
 ## 1024x768 custom layouts
 
