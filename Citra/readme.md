@@ -1,6 +1,6 @@
 # Citra custom layouts
 
-**I've made a very simple program in C# that can generate custom layouts for Citra, using three options: centered, side-by-side, in set (top left, top right, bottom left, bottom right). If you want to generate for different screen sizes or for in set, this should make it a lot easier. [Download it from here.](https://mega.nz/file/QPUFCRpR#TcMDqtXEyZLeiE0X8ubU_2TpSjICff_0FWR12PJ-Z3Y)**
+**I've made a very simple program in C# that can generate custom layouts for Citra, using three options: centered, side-by-side, in set (top left, top right, bottom left, bottom right). If you want to generate for different screen sizes or for in set, this should make it a lot easier. [Download it from here.](https://mega.nz/file/pWl0zLwL#rzt5L6d-FRf8lcAm5UqMJ_eepr-Ay82T5t8acl6t1RY)**
 
 If you search for this, a popular link will lead to this [page](https://www.reddit.com/r/Citra/comments/afsq4a/various_custom_screen_layouts/). That got me started. The original screen sizes are the following:
 
