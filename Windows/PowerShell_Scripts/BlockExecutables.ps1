@@ -1,4 +1,6 @@
-# This is a rudimentary approach to stopping malicious executables from doing damage
+# This is a rudimentary approach to stopping malicious processes from doing damage
+# However, do not blindly trust this for security, this was only made for a PowerShell exercise
+# The apps still run at first, but they quickly get terminated if they are not in a trusted path
 # You need to whitelist paths manually where executables are allowed to run
 
 # Change title
